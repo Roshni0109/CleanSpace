@@ -12,9 +12,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { toast } from 'sonner';
-import { API } from '../App';
-const React = require('react');
-const { AuthContext } = require('../App');
+import { API, AuthContext } from '../App';
 
 export default function AdminDashboard() {
   const navigate = useNavigate();
