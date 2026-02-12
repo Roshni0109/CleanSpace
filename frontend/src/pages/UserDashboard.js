@@ -5,9 +5,7 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, LogOut, Plus, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
-import { API } from '../App';
-const React = require('react');
-const { AuthContext } = require('../App');
+import { API, AuthContext } from '../App';
 
 export default function UserDashboard() {
   const navigate = useNavigate();
