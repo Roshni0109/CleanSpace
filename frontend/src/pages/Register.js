@@ -7,9 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
-import { API } from '../App';
-const React = require('react');
-const { AuthContext } = require('../App');
+import { API, AuthContext } from '../App';
 
 export default function Register() {
   const navigate = useNavigate();
