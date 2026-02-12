@@ -1,0 +1,195 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "E1_Clean_SaaS",
+      "archetype": "Organic & Earthy",
+      "vibe": "Fresh, Reliable, Serene, Efficient",
+      "theme_mode": "light"
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Manrope, sans-serif",
+        "body": "Inter, sans-serif",
+        "accent": "Playfair Display, serif"
+      },
+      "scale": {
+        "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]",
+        "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body_large": "text-lg md:text-xl leading-relaxed text-muted-foreground",
+        "body_default": "text-base leading-relaxed text-muted-foreground",
+        "caption": "text-sm font-medium tracking-widest uppercase text-muted-foreground/80"
+      },
+      "imports": [
+        "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;600;700;800&family=Playfair+Display:ital@0;1&display=swap');"
+      ]
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#4A6741",
+          "foreground": "#FFFFFF",
+          "hover": "#3A5233"
+        },
+        "secondary": {
+          "DEFAULT": "#F2F0E9",
+          "foreground": "#2C3329"
+        },
+        "accent": {
+          "DEFAULT": "#C87963",
+          "foreground": "#FFFFFF"
+        },
+        "background": "#FAFAF9",
+        "foreground": "#1A1C19",
+        "muted": {
+          "DEFAULT": "#E5E7EB",
+          "foreground": "#6B7280"
+        },
+        "card": {
+          "DEFAULT": "#FFFFFF",
+          "foreground": "#1A1C19"
+        },
+        "border": "#E5E5E0"
+      },
+      "gradients": {
+        "hero": "bg-gradient-to-br from-[#F2F0E9] via-[#FAFAF9] to-[#E8ECE6]",
+        "subtle_glow": "bg-gradient-to-tr from-primary/5 via-transparent to-accent/5"
+      }
+    },
+    "spacing": {
+      "container_padding": "px-6 md:px-12 lg:px-24",
+      "section_gap": "py-24 md:py-32",
+      "element_gap": "gap-6 md:gap-12"
+    },
+    "visual_enhancers": {
+      "radius": "rounded-2xl",
+      "shadows": {
+        "card": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+        "floating": "shadow-[0_20px_50px_rgb(0,0,0,0.1)]",
+        "inner": "shadow-[inset_0_2px_4px_rgba(0,0,0,0.02)]"
+      },
+      "glassmorphism": "bg-white/70 backdrop-blur-xl border border-white/20 shadow-sm",
+      "textures": "bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"
+    }
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "hero": {
+        "structure": "grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[90vh]",
+        "text_col": "col-span-1 lg:col-span-6 flex flex-col gap-8",
+        "image_col": "col-span-1 lg:col-span-6 relative h-full min-h-[500px]",
+        "image_style": "rounded-[3rem] overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-all duration-700 ease-out"
+      },
+      "services_grid": {
+        "mode": "Bento Mode A (Tetris)",
+        "wrapper": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8",
+        "items": [
+          { "role": "hero", "span": "col-span-full md:col-span-8 row-span-2", "content": "Deep Cleaning (Dominant)" },
+          { "role": "square", "span": "col-span-4 row-span-1", "content": "Standard Clean" },
+          { "role": "tall", "span": "col-span-4 row-span-2", "content": "Office/Commercial" },
+          { "role": "filler", "span": "col-span-2", "content": "Eco-Friendly Badge" }
+        ]
+      }
+    },
+    "booking_flow": {
+      "structure": "max-w-3xl mx-auto",
+      "container": "bg-white/80 backdrop-blur-md rounded-3xl shadow-xl border border-white/50 p-8 md:p-12",
+      "progress_bar": "h-2 bg-secondary rounded-full overflow-hidden mb-12"
+    },
+    "dashboard": {
+      "grid": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "card_style": "bg-white rounded-xl border border-border/60 p-6 hover:shadow-md transition-all"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300",
+      "secondary": "bg-white text-foreground border-2 border-border hover:border-primary/50 hover:bg-secondary/50 h-12 px-8 rounded-full font-medium transition-all",
+      "ghost": "hover:bg-secondary/50 text-muted-foreground hover:text-foreground h-10 px-4 rounded-lg"
+    },
+    "inputs": {
+      "default": "h-12 bg-white/50 border-border focus:border-primary focus:ring-4 focus:ring-primary/10 rounded-xl transition-all",
+      "label": "text-sm font-medium text-foreground/80 mb-2 block"
+    },
+    "cards": {
+      "service": "group relative overflow-hidden rounded-3xl bg-white border border-border/50 p-8 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl",
+      "booking_summary": "bg-secondary/30 rounded-2xl p-6 border border-border/50"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_main": {
+        "url": "https://images.unsplash.com/photo-1597665863042-47e00964d899",
+        "alt": "Bright modern living room with white furniture",
+        "usage": "Hero section main image"
+      },
+      "service_office": {
+        "url": "https://images.unsplash.com/photo-1504297050568-910d24c426d3",
+        "alt": "Modern clean coworking office space",
+        "usage": "Office cleaning service card"
+      },
+      "service_deep_clean": {
+        "url": "https://images.unsplash.com/photo-1759301495175-51e540735644",
+        "alt": "Spotless kitchen counter detail",
+        "usage": "Deep cleaning service card"
+      },
+      "cleaner_profile": {
+        "url": "https://images.unsplash.com/photo-1729774093230-e98a3baabdc3",
+        "alt": "Professional housekeeper in green apron",
+        "usage": "Team section or trust indicator"
+      },
+      "supplies_eco": {
+        "url": "https://images.unsplash.com/photo-1591077101603-132e07f5b1e3",
+        "alt": "Eco-friendly green glass cleaning bottles",
+        "usage": "Sustainability section or background element"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-width={1.5} className='w-6 h-6'"
+    }
+  },
+  "motion": {
+    "page_transition": {
+      "initial": { "opacity": 0, "y": 20 },
+      "animate": { "opacity": 1, "y": 0 },
+      "exit": { "opacity": 0, "y": -20 },
+      "transition": { "duration": 0.4, "ease": "easeOut" }
+    },
+    "hover_lift": "hover:-translate-y-1 transition-transform duration-300 ease-out",
+    "stagger_children": {
+      "container": { "hidden": { "opacity": 0 }, "show": { "opacity": 1, "transition": { "staggerChildren": 0.1 } } },
+      "item": { "hidden": { "opacity": 0, "y": 20 }, "show": { "opacity": 1, "y": 0 } }
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'lucide-react' and 'framer-motion' immediately.",
+    "2. THEME: Update 'tailwind.config.js' with the specific colors defined in this JSON. Do not use default Tailwind colors.",
+    "3. FONTS: Add the Google Fonts import to 'index.css' and configure the font families in Tailwind.",
+    "4. LAYOUT: For the Landing Page, strictly follow the 'Bento Mode A' grid for the services section. Do not make a simple row of 3 cards.",
+    "5. BOOKING: The booking form must be a multi-step wizard (Service -> Date/Time -> Details -> Confirm). Do not put everything on one long page.",
+    "6. IMAGES: Use the provided Unsplash URLs. Do not use placeholders.",
+    "7. ACCESSIBILITY: Ensure all text on the Sage Green primary color is White. Ensure text on the Sand secondary color is Charcoal.",
+    "8. TESTING: Add 'data-testid' to all buttons, inputs, and service cards."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add '.App { text-align: center; }' in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts. Sonner component are located in '/app/src/components/ui/sonner.tsx'"
+  ]
+}
