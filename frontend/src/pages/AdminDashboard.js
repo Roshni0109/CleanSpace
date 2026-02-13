@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext ,useCallback} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -27,21 +27,22 @@ export default function AdminDashboard() {
       return;
     }
     fetchAllBookings();
-  }, [user]);
+  }, [user,navigate,fetchAllBookings]);
 
-  const fetchAllBookings = async () => {
-    try {
-      const token = localStorage.getItem('token');
-      const response = await axios.get(`${API}/bookings/all`, {
-        headers: { Authorization: `Bearer ${token}` }
-      });
-      setBookings(response.data);
-    } catch (error) {
-      toast.error('Failed to load bookings');
-    } finally {
-      setLoading(false);
-    }
-  };
+  const fetchAllBookings = useCallback(async () => {
+  try {
+    const token = localStorage.getItem('token');
+    const response = await axios.get(`${API}/bookings/all`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    setBookings(response.data);
+  } catch (error) {
+    toast.error('Failed to load bookings');
+  } finally {
+    setLoading(false);
+  }
+}, []);
+
 
   const handleStatusChange = async (bookingId, newStatus) => {
     try {
